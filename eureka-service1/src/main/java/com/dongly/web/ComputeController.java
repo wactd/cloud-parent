@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.cloud.client.serviceregistry.Registration;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Created by dongly on 2017/6/14.
@@ -27,7 +29,7 @@ public class ComputeController {
         this.registration = registration;
     }
 
-    @RequestMapping(value = "/add", method = RequestMethod.GET)
+    @GetMapping(value = "/add")
     public Integer add(@RequestParam Integer a, @RequestParam Integer b) {
         ServiceInstance instance = discoveryClient.getLocalServiceInstance();
         Integer r = a + b;

@@ -20,6 +20,10 @@
 
     <modules>
         <module>eureka-register</module>
+        <module>eureka-provide</module>
+        <module>eureka-service1</module>
+        <module>ribbon-consume</module>
+        <module>feign-consumer</module>
     </modules>
 
     <properties>

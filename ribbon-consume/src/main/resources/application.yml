@@ -1,10 +1,9 @@
 spring:
   application:
-    name: compute-service
+    name: ribbon-consumer
 server:
-  port: 8002
+  port: 8005
 eureka:
   client:
     service-url:
-      # 指定服务注册中心的位置
       defaultZone: http://localhost:8001/eureka/
